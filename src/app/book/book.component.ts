@@ -9,7 +9,10 @@ import { BookDetailComponent } from '../book-detail/book-detail.component';
   templateUrl: './book.component.html',
   styleUrls: ['./book.component.css']
 })
+
+
 export class BookComponent implements OnInit {
+
 
   constructor(private router: Router, private route: ActivatedRoute, private http: HttpClient) { }
 

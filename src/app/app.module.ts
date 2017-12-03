@@ -30,7 +30,7 @@ const appRoutes: Routes = [
       path: 'books',
       component: BookComponent,
       children: [
-        { path: 'book-details/:id', component: BookDetailComponent }, // url: about/
+        { path: 'book-details/:id', component: BookDetailComponent }, 
       ]
     },
   {

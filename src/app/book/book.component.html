@@ -13,10 +13,8 @@
       <tr *ngFor="let book of books">
         <td>{{ book.title }}</td>
         <td>{{ book.author }}</td>
-         <td><a [routerLink]="['/books/book-details', book._id]" >Show Details</a></td>
-         <!-- <td><a [routerLink]="[{ outlets: { book-detail: ['book-details', book._id] }}]" >Show Details</a></td> -->
-        <!-- <button type="button"
-        [routerLink]="['/books',{outlets:{book-detail:['/book-details', book._id]}}]">Edit</button> -->
+         <td ><a [routerLink]="['/books/book-details', book._id]">Show Details</a></td>
+         <!-- <td ><a (click)="getBookDetail(book._id)">Show Details</a></td> -->
       </tr>
     </tbody>
   </table>
