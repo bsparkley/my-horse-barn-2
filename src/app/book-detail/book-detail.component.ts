@@ -1,6 +1,7 @@
 import { Component, OnInit, ViewEncapsulation } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { ActivatedRoute, Router } from '@angular/router';
+import { BookComponent } from '../book/book.component';
 
 @Component({
   selector: 'app-book-detail',
@@ -23,7 +24,7 @@ export class BookDetailComponent implements OnInit {
       this.book = data;
     });
   }
-
+  
   deleteBook(id) {
     this.http.delete('/book/'+id)
       .subscribe(res => {

@@ -5,22 +5,34 @@ import { HttpClientModule } from '@angular/common/http';
 import { AppComponent } from './app.component';
 import { BookComponent } from './book/book.component';
 import { RouterModule, Routes } from '@angular/router';
+import { RouterOutlet } from '@angular/router';
 import { BookDetailComponent } from './book-detail/book-detail.component';
 import { BookCreateComponent } from './book-create/book-create.component';
 import { BookEditComponent } from './book-edit/book-edit.component';
 
 
 const appRoutes: Routes = [
-  {
-    path: 'books',
-    component: BookComponent,
-    data: { title: 'Book List' }
-  },
-  {
-    path: 'book-details/:id',
-    component: BookDetailComponent,
-    data: { title: 'Book Details' }
-  },
+
+  // {
+  //     path: 'books',
+  //    component: BookComponent,
+  //    data: { title: 'Book List' }
+  //   },
+  //  {
+  //     path: 'book-details/:id',
+  //     component: BookDetailComponent,
+  //     data: { title: 'Book Details' },
+  //   },
+
+    { path: '', component: BookComponent },
+
+    {
+      path: 'books',
+      component: BookComponent,
+      children: [
+        { path: 'book-details/:id', component: BookDetailComponent }, // url: about/
+      ]
+    },
   {
     path: 'book-create',
     component: BookCreateComponent,
@@ -31,10 +43,10 @@ const appRoutes: Routes = [
     component: BookEditComponent,
     data: { title: 'Edit Book' }
   },
-  { path: '',
-    redirectTo: '/books',
-    pathMatch: 'full'
-  }
+  // { path: '',
+  //    redirectTo: '/books',
+  //    pathMatch: 'full'
+  //  }
 ];
 
 
