@@ -1,36 +1,36 @@
 import { Component, OnInit, ViewEncapsulation } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { ActivatedRoute, Router } from '@angular/router';
-import { BookComponent } from '../book/book.component';
+import { HorseComponent } from '../horse/horse.component';
 
 @Component({
-  selector: 'app-book-detail',
-  templateUrl: './book-detail.component.html',
-  styleUrls: ['./book-detail.component.css'],
+  selector: 'app-horse-detail',
+  templateUrl: './horse-detail.component.html',
+  styleUrls: ['./horse-detail.component.css'],
   encapsulation: ViewEncapsulation.None
 })
-export class BookDetailComponent implements OnInit {
+export class HorseDetailComponent implements OnInit {
 
-  book = {};
+  horse = {};
 
   constructor(private router: Router, private route: ActivatedRoute, private http: HttpClient) { 
     route.params.subscribe(val => {
-      this.getBookDetail(this.route.snapshot.params['id']);
+      this.getHorseDetail(this.route.snapshot.params['id']);
     });
   }
 
   ngOnInit() {
-    this.getBookDetail(this.route.snapshot.params['id']);
+    this.getHorseDetail(this.route.snapshot.params['id']);
   }
 
-  getBookDetail(id) {
-    this.http.get('/book/' + id).subscribe(data => {
-      this.book = data;
+  getHorseDetail(id) {
+    this.http.get('/horse/' + id).subscribe(data => {
+      this.horse = data;
     });
   }
 
-  deleteBook(id) {
-    this.http.delete('/book/' + id, this.book)
+  deleteHorse(id) {
+    this.http.delete('/horse/' + id, this.horse)
       .subscribe(res => {
         this.router.navigate(['/']);
       }, (err) => {

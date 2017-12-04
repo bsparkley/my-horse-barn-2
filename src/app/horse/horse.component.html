@@ -1,0 +1,20 @@
+<router-outlet></router-outlet>
+<div class="container">
+  <h1>Horse List</h1>
+  <table class="table">
+    <thead>
+      <tr>
+        <th>Title</th>
+        <th>Author</th>
+        <th>Action</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let horse of horses">
+        <td>{{ horse.title }}</td>
+        <td>{{ horse.author }}</td>
+         <td ><a [routerLink]="['/horses/horse-details', horse._id]">Show Details</a></td>
+      </tr>
+    </tbody>
+  </table>
+</div>

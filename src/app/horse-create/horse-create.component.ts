@@ -4,25 +4,25 @@ import { ActivatedRoute, Router } from '@angular/router';
 import { HttpClient } from '@angular/common/http';
 
 @Component({
-  selector: 'app-book-create',
-  templateUrl: './book-create.component.html',
-  styleUrls: ['./book-create.component.css'],
+  selector: 'app-horse-create',
+  templateUrl: './horse-create.component.html',
+  styleUrls: ['./horse-create.component.css'],
   encapsulation: ViewEncapsulation.None
 })
-export class BookCreateComponent implements OnInit {
+export class HorseCreateComponent implements OnInit {
 
-  book = {};
+  horse = {};
 
   constructor(private router: Router, private route: ActivatedRoute, private http: HttpClient) { }
 
   ngOnInit() {
   }
 
-  saveBook() {
-    this.http.post('/book', this.book)
+  saveHorse() {
+    this.http.post('/horse', this.horse)
       .subscribe(res => {
           let id = res['_id'];
-          this.router.navigate(['/books']);
+          this.router.navigate(['/horses']);
         }, (err) => {
           console.log(err);
         }

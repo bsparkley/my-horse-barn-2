@@ -1,0 +1,32 @@
+<div class="container">
+  <h1>Add New horse</h1>
+  <div class="row">
+    <div class="col-md-6">
+      <form (ngSubmit)="saveHorse()" #horseForm="ngForm">
+        <div class="form-group">
+          <label for="name">ISBN</label>
+          <input type="text" class="form-control" [(ngModel)]="horse.isbn" name="isbn" required>
+        </div>
+        <div class="form-group">
+          <label for="name">Title</label>
+          <input type="text" class="form-control" [(ngModel)]="horse.title" name="title" required>
+        </div>
+        <div class="form-group">
+          <label for="name">Author</label>
+          <input type="text" class="form-control" [(ngModel)]="horse.author" name="author" required>
+        </div>
+        <div class="form-group">
+          <label for="name">Published Year</label>
+          <input type="number" class="form-control" [(ngModel)]="horse.published_year" name="published_year" required>
+        </div>
+        <div class="form-group">
+          <label for="name">Publisher</label>
+          <input type="text" class="form-control" [(ngModel)]="horse.publisher" name="publisher" required>
+        </div>
+        <div class="form-group">
+          <button type="submit" class="btn btn-success" [disabled]="!horseForm.form.valid">Save</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>

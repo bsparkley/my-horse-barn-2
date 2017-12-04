@@ -3,48 +3,48 @@ import { NgModule } from '@angular/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { AppComponent } from './app.component';
-import { BookComponent } from './book/book.component';
+import { HorseComponent } from './horse/horse.component';
 import { RouterModule, Routes } from '@angular/router';
 import { RouterOutlet } from '@angular/router';
-import { BookDetailComponent } from './book-detail/book-detail.component';
-import { BookCreateComponent } from './book-create/book-create.component';
-import { BookEditComponent } from './book-edit/book-edit.component';
+import { HorseDetailComponent } from './horse-detail/horse-detail.component';
+import { HorseCreateComponent } from './horse-create/horse-create.component';
+import { HorseEditComponent } from './horse-edit/horse-edit.component';
 
 
 const appRoutes: Routes = [
 
   // {
-  //     path: 'books',
-  //    component: BookComponent,
-  //    data: { title: 'Book List' }
+  //     path: 'horses',
+  //    component: HorseComponent,
+  //    data: { title: 'horse List' }
   //   },
   //  {
-  //     path: 'book-details/:id',
-  //     component: BookDetailComponent,
-  //     data: { title: 'Book Details' },
+  //     path: 'horse-details/:id',
+  //     component: HorseDetailComponent,
+  //     data: { title: 'horse Details' },
   //   },
 
-    { path: '', component: BookComponent },
+    { path: '', component: HorseComponent },
 
     {
-      path: 'books',
-      component: BookComponent,
+      path: 'horses',
+      component: HorseComponent,
       children: [
-        { path: 'book-details/:id', component: BookDetailComponent }, 
+        { path: 'horse-details/:id', component: HorseDetailComponent }, 
       ]
     },
   {
-    path: 'book-create',
-    component: BookCreateComponent,
-    data: { title: 'Create Book' }
+    path: 'horse-create',
+    component: HorseCreateComponent,
+    data: { title: 'Create Horse' }
   },
   {
-    path: 'book-edit/:id',
-    component: BookEditComponent,
-    data: { title: 'Edit Book' }
+    path: 'horse-edit/:id',
+    component: HorseEditComponent,
+    data: { title: 'Edit Horse' }
   },
   // { path: '',
-  //    redirectTo: '/books',
+  //    redirectTo: '/horses',
   //    pathMatch: 'full'
   //  }
 ];
@@ -53,10 +53,10 @@ const appRoutes: Routes = [
 @NgModule({
   declarations: [
     AppComponent,
-    BookComponent,
-    BookDetailComponent,
-    BookCreateComponent,
-    BookEditComponent
+    HorseComponent,
+    HorseDetailComponent,
+    HorseCreateComponent,
+    HorseEditComponent
   ],
   imports: [
     BrowserModule,
