@@ -1,7 +1,9 @@
-<h1>Horse List
-    <a [routerLink]="['/horse-create']" class="btn btn-default btn-lg">
-      <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
-    </a>
-  </h1>
- <router-outlet></router-outlet>
-
+<div class="site-wrapper text-center">
+  <header class="clearfix">
+    <img src="http://www.horseclipart.com/horse_clipart_images/funny_looking_cartoon_horse_0521-1006-2722-1250_SMU.jpg" />
+    <h1>{{ title | uppercase }}</h1>
+    <a [routerLink]="['/horse-create']" class="btn btn-info pull-right hidden-xs">ADD NEW HORSE</a>
+  </header>
+  <router-outlet></router-outlet>
+  <a [routerLink]="['/horse-create']" class="btn btn-info hidden-sm hidden-md hidden-lg hidden-xl">ADD NEW HORSE</a>
+</div>

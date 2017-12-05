@@ -1,0 +1,38 @@
+ 
+  header img, header h1 {
+    display: inline-block;
+  }
+  
+  header {
+    background-color: white;
+    border-bottom: 1px solid #eee;
+    margin-bottom: 3%;
+  }
+  
+  header img {
+    width: 30%;
+  }
+
+  .btn {
+    margin: 2% 2% 2% 0;
+  }
+
+    /* Small devices (tablets, 768px and up) */
+@media (min-width: 768px) { 
+
+}
+
+/* Medium devices (desktops, 992px and up) */
+@media (min-width: 992px) { 
+  header img {
+    width: 20%;
+  }
+}
+
+/* Large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) { 
+
+  header img {
+    width: 10%;
+  }
+}

@@ -1,13 +1,14 @@
 var mongoose = require('mongoose');
 
 var HorseSchema = new mongoose.Schema({
-    isbn: String,
-    title: String,
-    author: String,
+    name: String,
+    breed: String,
+    height: String,
     description: String,
-    published_year: String,
-    publisher: String,
-    updated_date: { type: Date, default: Date.now },
+    color: String,
+    hay: String,
+    treat: String,
+    img: String
   });
 
   module.exports = mongoose.model('Horse', HorseSchema);

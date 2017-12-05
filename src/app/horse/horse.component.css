@@ -1,0 +1,28 @@
+
+.col-md-3 {
+    padding: 10px;
+}
+.horse-box {
+    background-color: #ffffff;
+    padding: 10px;
+    box-sizing: border-box;
+    box-shadow: 2px 1px 10px 0px #999;
+}
+
+.horse-info {
+	padding: 10px 5px;
+}
+
+.horse-info-name {
+    font-size:1.4em;
+    text-align: left;
+    font-family: 'Oswald', sans-serif;
+}
+
+  /* Small devices (tablets, 768px and up) */
+  @media (min-width: 768px) { }
+  
+  /* Medium devices (desktops, 992px and up) */
+  @media (min-width: 992px) { }
+  /* Large devices (large desktops, 1200px and up) */
+  @media (min-width: 1200px) { }

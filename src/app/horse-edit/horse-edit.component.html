@@ -1,30 +1,38 @@
 <div class="container">
-  <h1>Edit Horse</h1>
+  <h1>Edit {{ horse.name }}</h1>
   <div class="row">
     <div class="col-md-6">
       <form (ngSubmit)="updateHorse(horse._id)" #horseForm="ngForm">
         <div class="form-group">
-          <label for="name">ISBN</label>
-          <input type="text" class="form-control" [(ngModel)]="horse.isbn" name="isbn" required>
+          <label for="name">Name</label>
+          <input type="text" class="form-control" [(ngModel)]="horse.name" name="name" required>
         </div>
         <div class="form-group">
-          <label for="name">Title</label>
-          <input type="text" class="form-control" [(ngModel)]="horse.title" name="title" required>
+          <label for="name">Breed</label>
+          <input type="text" class="form-control" [(ngModel)]="horse.breed" name="breed" required>
         </div>
         <div class="form-group">
-          <label for="name">Author</label>
-          <input type="text" class="form-control" [(ngModel)]="horse.author" name="author" required>
+          <label for="name">Height</label>
+          <input type="text" class="form-control" [(ngModel)]="horse.height" name="height" required>
         </div>
         <div class="form-group">
-          <label for="name">Published Year</label>
-          <input type="number" class="form-control" [(ngModel)]="horse.published_year" name="published_year" required>
+          <label for="name">Color</label>
+          <input type="text" class="form-control" [(ngModel)]="horse.color" name="color" required>
         </div>
         <div class="form-group">
-          <label for="name">Publisher</label>
-          <input type="text" class="form-control" [(ngModel)]="horse.publisher" name="publisher" required>
+          <label for="name">Hay</label>
+          <input type="text" class="form-control" [(ngModel)]="horse.hay" name="hay" required>
         </div>
         <div class="form-group">
-          <button type="submit" class="btn btn-success" [disabled]="!horseForm.form.valid">Update</button>
+          <label for="name">Treat</label>
+          <input type="text" class="form-control" [(ngModel)]="horse.treat" name="treat" required>
+        </div>
+        <div class="form-group">
+          <label for="name">Image</label>
+          <input type="text" class="form-control" [(ngModel)]="horse.img" name="image" required>
+        </div>
+        <div class="form-group">
+          <button type="submit" class="btn btn-success" [disabled]="!horseForm.form.valid">UPDATE</button>
         </div>
       </form>
     </div>

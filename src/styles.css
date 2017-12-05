@@ -1,1 +1,8 @@
 /* You can add global styles to this file, and also import other style files */
+h1, h2, h3, h4 {
+    font-family: 'Oswald', sans-serif;
+  }
+
+  p, li, .btn, a {
+    font-family: 'Lato', sans-serif;
+  }

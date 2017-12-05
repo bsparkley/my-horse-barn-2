@@ -1,20 +1,16 @@
 <router-outlet></router-outlet>
 <div class="container">
-  <h1>Horse List</h1>
-  <table class="table">
-    <thead>
-      <tr>
-        <th>Title</th>
-        <th>Author</th>
-        <th>Action</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr *ngFor="let horse of horses">
-        <td>{{ horse.title }}</td>
-        <td>{{ horse.author }}</td>
-         <td ><a [routerLink]="['/horses/horse-details', horse._id]">Show Details</a></td>
-      </tr>
-    </tbody>
-  </table>
+  <div class="row">
+    <div class="col-xs-6 col-md-3" *ngFor="let horse of horses">
+      <div class="horse-box">
+        <img src="{{ horse.img }}" class="img-responsive">
+        <div class="horse-info">
+          <div class="pull-right">
+            <a [routerLink]="['/horses/horse-details', horse._id]" class="btn btn-primary" role="button">DETAILS</a>
+          </div>
+          <div class="horse-info-name">{{ horse.name | uppercase }}</div>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>
