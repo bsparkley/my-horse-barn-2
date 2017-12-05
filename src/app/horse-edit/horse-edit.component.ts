@@ -1,6 +1,7 @@
 import { Component, OnInit, ViewEncapsulation } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { HttpClient } from '@angular/common/http';
+import { Location } from '@angular/common';
 
 @Component({
   selector: 'app-horse-edit',
@@ -12,7 +13,7 @@ export class HorseEditComponent implements OnInit {
 
   horse = {};
 
-  constructor(private http: HttpClient, private router: Router, private route: ActivatedRoute) { }
+  constructor(private http: HttpClient, private router: Router, private route: ActivatedRoute, private location: Location) { }
 
   ngOnInit() {
     this.getHorse(this.route.snapshot.params['id']);
@@ -24,15 +25,19 @@ export class HorseEditComponent implements OnInit {
     });
   }
 
-  updateHorse(id, data) {
+  updateHorse(id, horse) {
     this.http.put('/horse/'+ id, this.horse)
       .subscribe(res => {
           let id = res['_id'];
-          this.router.navigate(['/horses']);  
+          this.goBack(); 
         }, (err) => {
           console.log(err);
         }
       );
+  }
+
+  goBack(): void {
+    this.location.back();
   }
 
 }
