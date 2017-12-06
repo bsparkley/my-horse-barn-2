@@ -13,17 +13,6 @@ import { HorseEditComponent } from './horse-edit/horse-edit.component';
 
 const appRoutes: Routes = [
 
-  // {
-  //     path: 'horses',
-  //    component: HorseComponent,
-  //    data: { title: 'horse List' }
-  //   },
-  //  {
-  //     path: 'horse-details/:id',
-  //     component: HorseDetailComponent,
-  //     data: { title: 'horse Details' },
-  //   },
-
     { path: '', component: HorseComponent },
 
     {
@@ -43,12 +32,12 @@ const appRoutes: Routes = [
     component: HorseEditComponent,
     data: { title: 'Edit Horse' }
   },
+  
   // { path: '',
   //    redirectTo: '/horses',
   //    pathMatch: 'full'
   //  }
 ];
-
 
 @NgModule({
   declarations: [
